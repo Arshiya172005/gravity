@@ -1,0 +1,132 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full Height Body and HTML */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling when elements fall */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #d1c4e9 0%, #d5d5d5 100%); /* Soft purple to gray gradient */
+}
+
+/* Main Container */
+#main-container {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    color: #333; /* Dark gray for better contrast */
+}
+
+/* Title Styling */
+#title {
+    margin-bottom: 20px;
+    font-size: 48px; /* Increased font size for title */
+    color: #673ab7; /* Deep purple */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Search Box */
+.search-box {
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+input#search-input {
+    width: 320px; /* Slightly increased width */
+    padding: 12px;
+    border-radius: 25px; /* Rounded corners */
+    border: 2px solid #673ab7; /* Border color matching title */
+    outline: none;
+    font-size: 18px; /* Increased font size */
+    transition: border-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Focus Effect */
+input#search-input:focus {
+    border-color: #ff4081; /* Bright pink border on focus */
+}
+
+/* Button Styles */
+.btn {
+    margin: 10px;
+    padding: 12px 24px; /* Increased button padding */
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4081 0%, #ff6f20 100%); /* Bright pink to orange gradient */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px; /* Increased font size */
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6f20 0%, #ff4081 100%); /* Reverse gradient on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Danger Button (for Clear History) */
+.btn.danger {
+    background: linear-gradient(135deg, #f44336 0%, #ff4081 100%); /* Red gradient for danger action */
+}
+
+/* History Title */
+#history-title {
+    margin-top: 30px;
+    font-size: 28px; /* Increased font size for better visibility */
+    color: #ff4081; /* Bright pink for emphasis */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Search History List */
+.history-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* History List Items */
+.history-list li {
+    margin: 5px 0;
+    background: linear-gradient(135deg, #e1bee7 0%, #cfd8dc 100%); /* Light purple to gray gradient */
+    padding: 10px;
+    border-radius: 5px;
+    width: 320px; /* Match input width */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark gray for better readability */
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on list items */
+.history-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating elements in the DOM (inputs, buttons, history items) */
+#title, #history-title, .btn, #search-input, li {
+    visibility: visible; /* Always visible now */
+}
+
+/* Ensure the list appears below the title and buttons */
+#history-title {
+    font-size: 24px;
+    color: #673ab7; /* Deep purple for consistent theming */
+}
